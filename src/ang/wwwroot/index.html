@@ -1,18 +1,17 @@
 ﻿<!DOCTYPE html>
-<html ng-app="purchaseApp">
+<html ng-app="myApp">
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
 </head>
-<body ng-controller="purchaseController">
-    <div class="page-header">Purchase list:</div>
-    <div class="panel">
-        <div class="form-inline">
-            <div class="form-group">
-                <div class="col-md-8">
-            </div>
-        </div>
+<body>
+    <div ng-controller="phoneController">
+        <ng-include src="'phoneList.html'"></ng-include>
     </div>
-    <script type="text/javascript" src="scripts/angular.min.js"></script>
+    <script type="text/javascript" src="js/lib/angular.min.js"></script>
+    <script type="text/javascript">
+        var myApp = angular.module("myApp", []);
+    </script>
+    <script src="js/controller/phonesController.js"></script>
 </body>
 </html>

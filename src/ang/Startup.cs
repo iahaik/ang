@@ -18,8 +18,6 @@ namespace ang
         {
             var conection = @"Server=ASD-PRESNYAKOV\SQL2K12;Database=EFGetStarted.AspNetCore.NewDb;User Id=angular;Password=angular;";
             services.AddDbContext<GroupContext>(options => options.UseSqlServer(conection));
-            //var mvcCore = services.AddMvcCore();
-            //mvcCore.AddJsonFormatters(options => options.ContractResolver = new CamelCasePropertyNamesContractResolver());
             services.AddMvc()
             .AddJsonOptions(options => {
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;

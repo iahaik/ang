@@ -1,0 +1,24 @@
+﻿<div>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Participants</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="group in groups">
+                <td>{{group.name}}</td>
+                <td>
+                    <div ng-repeat="participant in group.participants">
+                        <p>{{participant.firstName}} {{participant.lastName}}</p>
+                    </div>
+                </td>
+                <td><input type="button" class="btn btn-default" ng-click="selectGroup(group)" value="Details"/></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <div group-detail="selectedGroup" ng-hide="hidden"></div>
+</div>

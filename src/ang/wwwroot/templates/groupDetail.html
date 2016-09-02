@@ -1,0 +1,17 @@
+﻿<div>
+    <h1>{{selectedGroup.name}}</h1>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="participant in selectedGroup.participants">
+                <td>{{participant.firstName}}</td>
+                <td>{{participant.lastName}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -13,12 +13,12 @@
         $routeProvider.when("/creategroup", 
             {
                 templateUrl: "views/createGroup.html",
-                controller: "groupController"
+                controller: "creationController"
             });
         $routeProvider.when("/createparticipant",
             {
                 templateUrl: "views/createParticipant.html",
-                controller: "participantController"
+                controller: "creationController"
             });
         $routeProvider.otherwise({redirectTo: "/grouplist"});
     });

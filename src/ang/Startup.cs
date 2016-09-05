@@ -16,7 +16,7 @@ namespace ang
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var conection = @"Server=ASD-PRESNYAKOV\SQL2K12;Database=EFGetStarted.AspNetCore.NewDb;User Id=angular;Password=angular;";
+            var conection = @"Server=DESKTOP-1MP3MVU\SQLEXPRESS;Database=EFGetStarted.AspNetCore.NewDb;User Id=angular;Password=angular;";
             services.AddDbContext<GroupContext>(options => options.UseSqlServer(conection));
             services.AddMvc()
             .AddJsonOptions(options => {

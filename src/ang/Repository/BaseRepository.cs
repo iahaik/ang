@@ -31,11 +31,13 @@ namespace ang.Repository
         public virtual void Create(T entity)
         {
             _context.Set<T>().Add(entity);
+            _context.SaveChanges();
         }
 
         public virtual void Update(T entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
+            _context.SaveChanges();
         }
 
         public virtual void Delete(int id)
@@ -47,6 +49,7 @@ namespace ang.Repository
             }
 
             _context.Set<T>().Remove(entity);
+            _context.SaveChanges();
         }
     }
 }

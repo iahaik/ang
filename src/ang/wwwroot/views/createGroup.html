@@ -1,0 +1,9 @@
+﻿<form name="groupForm">
+    <fieldset>
+        <p>
+            <label for="groupName">Enter group name:</label>
+            <input id="groupName" ng-model="group.name" required placeholder="Enter group name" />
+        </p>
+    </fieldset>
+    <button class="btn btn-default" ng-click="createGroup(group, groupForm)" type="submit">Create</button>
+</form>

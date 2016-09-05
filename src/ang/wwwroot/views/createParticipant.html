@@ -1,0 +1,17 @@
+﻿<form name="participantForm">
+    <fieldset>
+        <p>
+            <label for="participantFirstName">Enter first name:</label>
+            <input id="participantFirstName" ng-model="participant.firstName" required placeholder="Enter first name" />
+        </p>
+        <p>
+            <label for="participantLastName">Enter last name:</label>
+            <input id="participantLastName" ng-model="participant.lastName" required placeholder="Enter last name" />
+        </p>
+        <p>
+            <label for="group">Choose group</label>
+            <select ng-model="participant.groupId" ng-options="group.groupId as group.name for group in groups"></select>
+        </p>
+    </fieldset>
+    <button class="btn btn-default" ng-click="createParticipant(participant, participantForm)" type="submit">Create</button>
+</form>
